@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 // import { createUser } from "../redux/actions/createUser";
-import { getUsers } from "../redux/actions/getUsers";
+import { getUsers } from "../../redux/actions/getUsers";
 
 
 const Users = () => {
