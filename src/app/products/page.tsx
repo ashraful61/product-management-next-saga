@@ -44,7 +44,7 @@ const Products = () => {
 
     return (
         <div className="p-8">
-            <div>Total: {products.length}</div>
+      
             <div className="my-5">
                 <form onSubmit={handleSubmit(onProductSubmit)} className="max-w-md">
                     {/* register your input into the hook by invoking the "register" function */}
@@ -109,6 +109,8 @@ const Products = () => {
                 </form>
 
             </div>
+
+            <div className="text-4xl">Total Product: {products.length}</div>
             {
                 products.map((product: any) => <Product key={product._id} product={product}></Product>)
             }
