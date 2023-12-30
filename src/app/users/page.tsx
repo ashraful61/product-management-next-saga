@@ -6,9 +6,11 @@ import { getUsers } from "../../redux/actions/getUsers";
 
 
 const Users = () => {
+
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState("");
   const users = useSelector((state: any) => state.users.data);
+
   const addUser = () => {
     // dispatch(createUser(inputValue));
     setInputValue("");
@@ -17,18 +19,20 @@ const Users = () => {
   useEffect(() => {
     dispatch(getUsers());
   }, [dispatch]);
-console.log(users);
+
+
   return (
-    <div>
-      <div>Total: {users.length}</div>
-      <div>
+    <div className="p-8">
+      <div className="mb-5 text-3xl">Total Users: {users.length}</div>
+      {/* <div>
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <button onClick={addUser}>Add user</button>
-      </div>
+      </div> */}
+
       <div>
         {users.map((user: any, index: any) => (
           <div key={index}>{user.name}</div>

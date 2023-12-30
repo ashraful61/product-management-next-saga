@@ -14,6 +14,7 @@ import {
   };
   
   const reducers = (state = initialState, action) => {
+
     switch (action.type) {
       case GET_PRODUCTS_START: {
         return { ...state, isLoading: true };
@@ -28,8 +29,9 @@ import {
         return { ...state, isLoading: true };
       }
       case CREATE_PRODUCT_SUCCESS: {
-        const updatedUsers = [...state.data, action.payload];
-        return { ...state, isLoading: false, data: updatedUsers };
+        console.log('ap',action.payload);
+        const updatedProducts = [...state.data, action.payload.result];
+        return { ...state, isLoading: false, data: updatedProducts };
       }
       case CREATE_PRODUCT_FAILURE: {
         return { ...state, isLoading: false, error: action.payload };

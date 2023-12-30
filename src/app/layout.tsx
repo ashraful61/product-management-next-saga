@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Provider } from 'react-redux'
 import store from "../redux/configureStore";
+import Header from "../components/Header"
 const inter = Inter({ subsets: ['latin'] })
 
 // export const metadata: Metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Provider store={store}>
-        <body>{children}</body>
+        <body>
+          <Header></Header>
+          {children}
+        </body>
       </Provider>
     </html>
   )
