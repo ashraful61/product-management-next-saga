@@ -94,7 +94,7 @@ const Products = () => {
                         <input
                             type="text"
                             defaultValue=""
-                            placeholder="Enter your product name"
+                            placeholder="Description"
                             {...register("description")}
                             className="appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         />
